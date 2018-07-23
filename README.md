@@ -1,7 +1,4 @@
 # Javascript-Exercises
-Javascript Practise
-
-Simple JS programs
 
 - Prototype (__proto__)
     - Prototype task
