@@ -3,7 +3,6 @@
 // It’s also a good way to avoid using the splice() method when looking to remove certain elements from an array because it can be combined with the slice() method to prevent direct mutation of an array.
 
 
-const fruitsVeg = ['orange', 'blueberries', 'greenbeans', 'cherry', 'mushroom', 'blackcurrants', 'carrots'];
-const  fruits= [...fruitsVeg.slice(0,1),...fruitsVeg.slice(3), ...fruitsVeg.slice(5)];
-
+const fruitsVeg = ['orange', 'blueberries','cherry', 'blackcurrants','mushroom', 'greenbeans','carrots','apple'];
+const  fruits= [...fruitsVeg.slice(0,4),...fruitsVeg.slice(7)];
 
