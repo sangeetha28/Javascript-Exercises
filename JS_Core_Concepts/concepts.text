@@ -1,0 +1,39 @@
+
+Compiler
+A program that converts the Javascript code into the set of computer(machine) instruction is called Compiler. Something the hardware can physically
+understand.
+Syntax Parser
+A program that reads your code and determine what it does and if the grammer is valid.
+
+Lexical Environment
+Where something(i.e functions, variables, etc etc ...) sits physically in the code you write.
+
+Execution Context
+There are lots of lexical environment. which one is currently running is managed via execution contexts.
+Whenever a code is run, it runs inside a execution context
+Base execution context is global execution context
+Global execution context creates two things 1. Global Object 2. Creates a special variable -> 'this'
+When JS engine runs the code, it creates above two things as the code is wrapped inside the execution context
+Even for empty(no code) js file, when it is loaded... execution context will be created.'this' will refer to the Window Object if the JS file is
+loaded on the browser, If running JS on the server, it won't be the window Object. If seperate tab is opened, then it is a seperate window object.
+Each browser tab will have its own execution context.
+Code or variable that's not inside a function is Global
+
+Execution context is created in two phases( Creation phase )
+Global Object + this + Outer Environment => will be created in memory
+
+// Parser will run through your code and it regonises where we create variables and where we create a function.
+// Setsup memory Space for variables and functions "Hoisting"
+
+Execution Context - Creation and Hoisting
+
+Variables and functions are available even though they have been written in later degree of code.
+
+b();     // Called b
+console.log(a); //undefined // Variables setup( and set equal to 'undefined') just as a placeholder
+
+
+var a = 'Hello World'; // if this declaration is removed // then the above code will throw referenceError
+function b() {
+ console.log('Called b')
+}
