@@ -1,0 +1,37 @@
+// Scope Chain - where can i access the variable in the chain
+// Where something sits physically(lexically) in the code, will help determine the scoping Chain
+// Where function sits determines its outer environment reference
+
+
+
+     function b() {   // Function b() is sitting lexically in the Global Environment
+      console.log(myVar);
+    }
+
+    function a() {
+      var myVar = 2;
+      b();
+    }
+
+    var myVar = 5
+    a();  // 5 as function b refers to Global Execution context
+    // b() refers to the outer environment i.e Global as b()
+
+
+
+/***************/
+
+
+
+    function a() {  // In the global execution phase , only function a will be set up not B // And a's reference to outer environment would be 'global'
+      var myVar = 2;
+
+         function b() {  // References to the Outer Lexical environment will be a  'a'
+            console.log(myVar);
+          }
+    }
+
+    var myVar = 5
+    a(); // 2
+  // If  myVar declaration from a() is removed, then a() will return '5', that is from global execution context
+

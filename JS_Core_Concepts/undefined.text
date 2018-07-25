@@ -1,0 +1,6 @@
+undefined is a special value and also a special keyword in javascript, the value the variables receives during the execution context creation
+phase, it sets up the memory space for the variable and puts the value as 'Undefined'
+
+var a; // if this declaration is removed, ReferenceError will be thrown.
+console.log(a); // undefined
+

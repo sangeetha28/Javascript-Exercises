@@ -1,0 +1,26 @@
+Invocation -> Running a function
+
+function b() {
+}
+
+function a() {
+}
+
+a();
+
+
+// What happens when run the above Javascript code
+
+1. Compiler will create an Global execution context i.e Global Object(Window)  and this variable
+2. Memory space will be created for the above function in the creation phase, function b and a will be in memory
+3. Once it hits a(), a new execution context will be created on the top (
+Execution Stack  - which context is on the top is the one currently running
+Whenever a function is called in JS, a new execution context is created and 'this' variable is created
+Even if the function invokes itself, a new execution context will be created
+Variable within the function will be setup(allot memory space) during creation phase)
+4. Once it hits b() within a(), JS engine will stop and create a new execution context for b()
+5. Once b() finished executing, it will get popped off  from the execution stack, then a() and then global execution context()
+
+
+Each execution context will go through creation(sets up space in memory for variable and functions) and execution phase(runs the code line by line)
+

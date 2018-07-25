@@ -6,7 +6,9 @@ Syntax Parser
 A program that reads your code and determine what it does and if the grammer is valid.
 
 Lexical Environment
-Where something(i.e functions, variables, etc etc ...) sits physically in the code you write.
+(i.e functions, variables, etc etc ...) sits physically in the code you write.JS engine will determine where
+certain thing lives and where things will sit in memory and how they connect to each other
+JS engine will care about where things sits lexically inorder to
 
 Execution Context
 There are lots of lexical environment. which one is currently running is managed via execution contexts.
@@ -19,8 +21,9 @@ loaded on the browser, If running JS on the server, it won't be the window Objec
 Each browser tab will have its own execution context.
 Code or variable that's not inside a function is Global
 
-Execution context is created in two phases( Creation phase )
-Global Object + this + Outer Environment => will be created in memory
+Execution context is created in two phases( Creation phase, Execution Phase )
+Creation Phase - Global Object + this + Outer Environment => will be created in memory
+Execution Phase - Runs your code ( interpreting, compiling it executes the code so that code will )
 
 // Parser will run through your code and it regonises where we create variables and where we create a function.
 // Setsup memory Space for variables and functions "Hoisting"
@@ -37,3 +40,5 @@ var a = 'Hello World'; // if this declaration is removed // then the above code 
 function b() {
  console.log('Called b')
 }
+
+
