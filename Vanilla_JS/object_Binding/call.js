@@ -37,3 +37,6 @@ var technicalBook = function(name,pages,author,coAuthor,publishYear) {
 
 
 var techBook1 = new technicalBook('Eloquent JS',400,'Marijn Haverbeke','',2015);
+
+var newIn = new novels('Eloquent JS',400,'Marijn Haverbeke');
+newIn.pages

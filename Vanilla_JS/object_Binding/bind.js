@@ -29,4 +29,4 @@ var obj1 = {
 }
 
 whatIsMyName(obj.greet); // Hey, Great to have you onBoard Rosa
-whatIsMyName(obj.greet.bind(obj)); // Hey, Great to have you onBoard Rosa
+whatIsMyName(obj.greet.bind(obj)); // Hey, Great to have you onBoard Jasmine

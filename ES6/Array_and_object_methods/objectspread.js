@@ -16,6 +16,8 @@ const object = {
     }
 }
 
+const newObject = {...object}
+
 const newObj = {
     ...object,
     lastname: 'R',
