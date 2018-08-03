@@ -1,4 +1,26 @@
-Javascript engine won't look at the event queue until the execution stack is
+Javascript engine won't look at the event queue until the execution stack is empty
+
+When a browser which is outside the JS engine wants to notify the event to the JS engine, events gets placed on the queue
+
+Event queue gets looked up by JS engine, only when Execution stack gets empty. 
+
+JS engine checks for the events in the event queue periodically 
+
+JS engine creates an execution context for the event
+
+JS is not asynchronous, it is a browser which does putting events in the queue asynchronously 
+
+Events are procressed in the way, they are placed 
+
+
+
+
+
+
+
+
+
+
 
 
 

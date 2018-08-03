@@ -1,0 +1,10 @@
+Dynamic Typing: 
+
+You don't tell the JS engine what type of data a variable holds, JS engine will figure out while your code is running 
+
+Variables can hold different types of values because it's all figured out during the execution
+
+Unlike other programming language like Java or c#, we don't have to tell the compiler ahead of time which type of data the variable is going to hold.( Static Typing) 
+
+
+

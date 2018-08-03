@@ -26,7 +26,7 @@ We can either use a tool like jQuery extend
 - Please create an example with jQuery extend*/
 
 
-var newPerson = $.extend(true,{firstName: 'sangeetha', gender: 'female'},person) // will add a newProperty but not override the value of exitsing fisrName property
+var newPerson = $.extend({},person,{firstName: 'sangeetha', gender: 'female'}) // will add a newProperty but not override the value of exitsing fisrName property
 
 /*Questions
 **********

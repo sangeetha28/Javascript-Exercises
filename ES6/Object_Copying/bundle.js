@@ -2,7 +2,7 @@
 const clone = require('lodash.clone')
 const clonedeep = require('lodash.clonedeep')
 
-// Command to bundle using Browserfy - browserify lodash.js -o bundle.js
+// Command to bundle using Browserfy - browserify exercise_4.js -o bundle.js
 var person = {
     firstName: 'Jonah',
     lastName: 'Samuel',

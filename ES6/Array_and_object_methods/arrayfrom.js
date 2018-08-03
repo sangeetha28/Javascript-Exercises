@@ -11,4 +11,4 @@ const newArray = Array.from('hello');
 Array.from([1, 2, 3], x => x + x);
 // [2, 4, 6]
 
-//what is the difference between arrayFrom and map?
+//what is the difference between arrayFrom and map? cxcx
