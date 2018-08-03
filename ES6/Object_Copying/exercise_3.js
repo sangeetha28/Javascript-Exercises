@@ -1,5 +1,4 @@
 (function deepClone() {
-
     var person = {
         firstName: 'Tim',
         lastName: 'Crook',
@@ -22,31 +21,42 @@
         return typeof data === 'object';
     }
 
-   function clone(data) {
-       var copy;
-       if(isObject(data)){
-           copy = {};
-           for(var key in data)
-           {
-               if(!isObject(data[key])) {
-                   copy[key] = data[key];
-               }
-               else
-               {
-                   copy[key] = clone(data[key])
-               }
-           }
-       }
-       else
-       {
-           copy = data;
-       }
-
+    function clone(data) {
+        var copy = {};
+        for(var key in data)
+        {
+            if(!isObject(data[key])) {
+                copy[key] = data[key];
+            }
+            else
+            {
+                copy[key] = clone(data[key])
+            }
+        }
         return copy;
-   }
-   var newObject = clone(person);
+    }
+
+    console.log('Original object, person ', person);
+
+    var newObject = clone(person);
+    console.log('New object, cloned from person ', newObject);
+
+    console.log('Updating name in clone');
+    newObject.firstName = 'Test';
+
+    console.log('Original object, person ', person);
+    console.log('New object, cloned from person ', newObject);
+
+    console.log('Updating nested property in clone');
     newObject.address.street.no = '30';
-   console.log('Newly Cloned Object is', newObject.address.street.no);
-   console.log('Main Object is', person.address.street.no);
+
+    console.log('Original object, person ', person);
+    console.log('New object, cloned from person ', newObject);
+
+    console.log('Updating function property in clone');
+    newObject.greet = function() { console.log('hey'); };
+
+    person.greet();
+    newObject.greet();
 
 })();
