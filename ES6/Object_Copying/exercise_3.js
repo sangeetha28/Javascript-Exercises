@@ -21,10 +21,42 @@
         return typeof data === 'object';
     }
 
+
+    function isArray(data) {
+        /* toString() is a prototype method of Object, so
+          We can use toString() to detect any object class
+          var toString = Object.prototype.toString;
+          ex: toString.call(new Date);    // [object Date]
+          return toString.call(data) === "[object Array]"
+      }*/
+        return toString.call(data) === "[object Array]"
+
+    }
+
     function clone(data) {
-        var copy = {};
+        var copy;
+        if(!isObject(data) || data === null){
+            return data;
+        }
+
+        if(isArray(data)) {
+            copy = [];
+            for(var i=0; i< data.length;i++){
+                if(isObject(data[i])){
+                    console.log('first',data[i]);
+                    copy[i] = clone(data[i]);
+                }
+                else
+                {
+                    console.log('Please pass an array of Objects as an Input!')
+                }
+            }
+            return copy;
+        }
+
         for(var key in data)
         {
+            copy = {};
             if(!isObject(data[key])) {
                 copy[key] = data[key];
             }
@@ -58,5 +90,15 @@
 
     person.greet();
     newObject.greet();
+
+    var arrayOfObjects = [{a:1,c:{b:3,e:4}},{b:'c'},{d:'7'}];
+    var newArrayOfObjects = clone(arrayOfObjects);
+
+    console.log('Updating nested property in clone');
+    newArrayOfObjects[0].c.e = 20;
+
+    console.log('New object, Mutating a nested property value', newArrayOfObjects[0].c.e);
+    console.log('Main object after mutation ', arrayOfObjects[0].c.e);
+
 
 })();
