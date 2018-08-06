@@ -68,30 +68,36 @@
         return copy;
     }
 
-    console.log('Original object, person ', person);
+    // console.log('Original object, person ', person);
+    //
+    // var newObject = clone(person);
+    // console.log('New object, cloned from person ', newObject);
+    //
+    // console.log('Updating name in clone');
+    // newObject.firstName = 'Test';
+    //
+    // console.log('Original object, person ', person);
+    // console.log('New object, cloned from person ', newObject);
+    //
+    // console.log('Updating nested property in clone');
+    // newObject.address.street.no = '30';
+    //
+    // console.log('Original object, person ', person);
+    // console.log('New object, cloned from person ', newObject);
+    //
+    // console.log('Updating function property in clone');
+    // newObject.greet = function() { console.log('hey'); };
+    //
+    // person.greet();
+    // newObject.greet();
 
-    var newObject = clone(person);
-    console.log('New object, cloned from person ', newObject);
+    var original = {a: 1,c:{firstName:'Noths employee',b: function() {
+                console.log('Hello '+ this.firstName+' Glad to Meet you!')
+            },e:4,get lastname() {
+                return this.lastName;
+            }}}
 
-    console.log('Updating name in clone');
-    newObject.firstName = 'Test';
-
-    console.log('Original object, person ', person);
-    console.log('New object, cloned from person ', newObject);
-
-    console.log('Updating nested property in clone');
-    newObject.address.street.no = '30';
-
-    console.log('Original object, person ', person);
-    console.log('New object, cloned from person ', newObject);
-
-    console.log('Updating function property in clone');
-    newObject.greet = function() { console.log('hey'); };
-
-    person.greet();
-    newObject.greet();
-
-    var arrayOfObjects = [{a:1,c:{b:3,e:4}},{b:'c'},{d:'7'}];
+    var arrayOfObjects = [ original,{b:'c'},{d:'7'}];
     var newArrayOfObjects = clone(arrayOfObjects);
 
     console.log('Updating nested property in clone');
@@ -100,5 +106,12 @@
     console.log('New object, Mutating a nested property value', newArrayOfObjects[0].c.e);
     console.log('Main object after mutation ', arrayOfObjects[0].c.e);
 
+    console.log('Updating function property in clone');
+    newArrayOfObjects[0].c.b = function() { console.log('hey'); };
+    newArrayOfObjects[0].c.b(); // hey
+
+
+    console.log('Main Object function after Mutation');
+    console.log(original.c.b()); // Hello Noths
 
 })();
