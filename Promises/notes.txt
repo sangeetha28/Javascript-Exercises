@@ -1,0 +1,15 @@
+Create a function that returns a promise, this promise will resolve after 1000 ms
+- Function returns a resolved promise and is handled by the consuming function
+
+Create a function that returns a promise, this promise will either be resolved or rejected (50/50) after 1000 ms
+- Function returns a promise that may or may not resolve
+
+Create a chain of promises, a function that returns a promise, a consuming function that will invoke another function once the promise is resolved (1000ms)
+- Function returns a promise, another function consumes it, another function is invoked when promise is resolved
+- Function returns a promise, another function consumes it, another function is invoked when the promise is rejected
+- Create a chain of 5 promises, where the last handler, the catch, will handle any rejected promises
+- Create a chain of 5 promises, where the last handler is a finally block that will always(?) run
+
+Create an array of 5 promises, pass the array to Promise.all and handle the outcome
+
+Create an array of 5 promises, pass the array to Promise.race and see which one finishes first
