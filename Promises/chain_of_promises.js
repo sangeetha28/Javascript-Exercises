@@ -1,3 +1,13 @@
+/*There are six methods which are below.
+
+Promise.all([promise1, promise2, …]);
+Promise.race([promise1, promise2, …]);
+Promise.reject(value);
+Promise.resolve(value);
+Promise.catch(onRejection);
+Promise.then(onFulFillment, onRejection);*/
+
+
 const apiKey = '9ff39916eeff358ef6c6a80cd795f6ca';
 //const apiKey = '815d7cd9989csdsb7a29e53d56599d769ad';
 const corsProxy = 'https://cors-anywhere.herokuapp.com';
