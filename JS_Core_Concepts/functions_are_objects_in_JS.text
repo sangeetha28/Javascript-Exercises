@@ -1,0 +1,11 @@
+Functions are special kind of objects in JS, we can attach a primitive, object or other functions to the Function. Functions sits in the memory, we can
+assign the function to the Variable, pass that as an arguement or create them on the Fly.
+
+function greet() {
+console.log('Hello');
+}
+
+greet.language = 'English!';  // We can add a new property to the function as Functions are Object in Javascript
+
+The Name property is set to Greet;
+The Code property contains the actual function code, which is invocable.
