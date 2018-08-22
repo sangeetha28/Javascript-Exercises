@@ -9,3 +9,5 @@ greet.language = 'English!';  // We can add a new property to the function as Fu
 
 The Name property is set to Greet;
 The Code property contains the actual function code, which is invocable.
+
+// function statement is where the keyword 'function' will be the first 

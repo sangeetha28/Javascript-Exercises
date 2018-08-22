@@ -35,7 +35,7 @@
 
     function clone(data) {
         var copy;
-        if(!isObject(data) || data === null){
+        if(!isObject(data)){
             return data;
         }
 
