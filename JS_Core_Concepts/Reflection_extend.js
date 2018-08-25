@@ -54,4 +54,8 @@ function extnd() {
 var call = extnd();
 call(john, jane, max);
 
+// Extends method does extend the prototypes too 
+
+
+
 
