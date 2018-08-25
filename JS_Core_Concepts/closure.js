@@ -94,3 +94,25 @@ function callBackEx() {
 }
 
 callBackEx();
+
+var i;
+for (i = 1; i <= 4; i++) {
+  setTimeout(function() {
+    console.log(i);
+  }, 1000);
+}
+//555555
+var i;
+for (i = 1; i <= 5; i++) {
+  // Closure Outer Function
+  (function(stored_separate_i) {
+    // Innere Function
+    // Inner Function has access to the Outer Function Variable 'stored-seperate-i
+    // Even after it exist.. each function will have its own execution context
+    // So i value will be different
+    setTimeout(function() {
+      console.log(stored_separate_i);
+    }, 1000);
+    console.log(callingnow);
+  })(i);
+}
